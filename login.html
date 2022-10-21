@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .login-page {
+            height: 350px;
+            width: 400px;
+            border: 4px solid black;
+            border-radius: 20px;
+            background-color: antiquewhite;
+            margin: 150px auto;
+            padding: 30px;
+        }
+
+        .login-page h3 {
+            text-align: center;
+            font-size: 30px;
+            padding-bottom: 15px;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            height: 10px;
+            width: 380px;
+            /* border: 2px solid gray; */
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 15px;
+            padding-bottom: 15px;
+        }
+
+        button {
+            height: 40px;
+            width: 410px;
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 3px;
+            background-color: blue;
+            color: white;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body style="font-family:poppins, sans-serif;">
+
+    <div class="login-page">
+        <h3>Login</h3>
+        <form action="" name="form1" method="post">
+            <input type="text" name="uname" placeholder="Enter Username" id="u_name" />
+            <span id="uname"></span>
+            <br />
+
+            <input type="password" name="pass" placeholder="Enter Password" id="pwd" />
+            <span id="pass"></span>
+            <br />
+            <button type="submit" onclick="return login_page()">Login</button>
+        </form>
+    </div>
+
+
+    <script>
+        function login_page() {
+            let uname = document.form1.uname.value;
+            let pass = document.form1.pass.value;
+
+            if (uname == "") {
+                document.getElementById("uname").innerHTML = "Enter username";
+                document.getElementById("u_name").innerHTML =
+                    "<style>#u_name{border: 2px solid red;}</style>";
+                return false;
+            }
+            if (pass == "") {
+                document.getElementById("pwd").innerHTML =
+                    "<style>#pwd{border: 2px solid red;}</style>";
+                document.getElementById("pass").innerHTML = "Enter Password";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

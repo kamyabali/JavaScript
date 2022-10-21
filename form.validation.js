@@ -72,7 +72,7 @@ function validation () {
     alert('enter 10 digits')
     return false
   } else if (mno.length > 10) {
-    alert('enter 10 digits')
+    alert('enter 10 digits')  
     return false
-  }
+  } 
 }
